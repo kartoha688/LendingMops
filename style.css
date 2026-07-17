@@ -1,0 +1,203 @@
+/* Базові налаштування */
+body {
+margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', sans-serif;
+  
+  /* Новий туман + фіксований розмір мопса */
+  background: 
+    radial-gradient(circle, rgba(253, 251, 247, 0.2) 0%, rgba(245, 238, 224, 0.92) 80%), 
+    url('https://i.pinimg.com/1200x/d0/b2/de/d0b2de685fe8e4b2c53b28d7cdcfe768.jpg') no-repeat center center fixed;
+  
+  /* Робимо картинку середнього розміру (60% від екрану), щоб вона не гігантила і не була замалою */
+  background-size: 60%; 
+  
+  color: #4a3f35;
+}
+
+/* --- ТВОЯ ШАПКА GLASSMORPHISM --- */
+.site-header {
+    background-color: rgba(234, 220, 201, 0.8); 
+    backdrop-filter: blur(10px);               
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 0 0 24px 24px;  
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(28, 28, 28, 0.04), 
+                0 1px 0px rgba(255, 255, 255, 0.6) inset; 
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/* КНОПКИ-КАПСУЛИ */
+.nav-btn {
+    text-decoration: none;         
+    background-color: rgba(28, 28, 28, 0.05); 
+    color: #1C1C1C;
+    padding: 12px 24px;
+    border-radius: 50px;           
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    display: inline-block;
+}
+
+.nav-btn:hover {
+    background-color: #DEB887;     
+    color: #1C1C1C;
+    transform: translateY(-3px);   
+    box-shadow: 0 8px 20px rgba(222, 184, 135, 0.4);
+}
+
+h1 {
+    color: #1C1C1C;
+    font-weight: 700;
+    font-size: 46px;
+    text-align: center;
+    margin: 40px 0 80px 0;
+    line-height: 1.2;
+}
+
+/* РЯДИ КОНТЕНТУ З ОПТИМІЗАЦІЄЮ ПІД ПОЯВУ */
+.reason-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto 100px auto;
+    
+    /* Скрол-reveal база */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reason-row.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reason-text {
+    padding-left: 20px;
+}
+
+.main-reason, h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    font-size: 18px;
+    color: #5A5A5A;
+    line-height: 1.7;
+}
+
+.media-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* --- ТОНОВАНІ БЕЖЕВІ РАМКИ ТА ТРЕНДОВЕ ЗD --- */
+.mopsik, .video-container {
+    border: 3px solid rgba(28, 28, 28, 0.15); 
+    padding: 8px;                             
+    background-color: #EADCC9; /* Твоя рідна палітра */               
+    border-radius: 20px;                      
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    box-shadow: 0 20px 40px rgba(28, 28, 28, 0.06);
+    
+    /* База для ефекту нахилу */
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform;
+}
+
+.mopsik:hover, .video-container:hover {
+    border-color: #DEB887;                    
+    box-shadow: 0 30px 60px rgba(222, 184, 135, 0.3);
+}
+
+.video-container iframe {
+    display: block;
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+}
+
+/* ТВІЙ ЦЕНТРАЛЬНИЙ ФУТЕР */
+.site-footer {
+    background-color: #EADCC9;      
+    padding: 40px 20px;
+    border-radius: 24px;
+    margin-top: 100px;
+    box-shadow: 0 -10px 30px rgba(28, 28, 28, 0.02);
+}
+
+.site-footer p {
+    font-size: 15px !important;
+    font-weight: bold;
+    color: #4A4A4A !important;
+    text-align: center;             
+}
+
+/* ПАРТИКЛИ ЛАПОК */
+.paw-particle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 24px;
+    z-index: 9999;
+    animation: flyUp 0.8s ease-out forwards;
+}
+
+@keyframes flyUp {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(-50%, -150%) scale(1.4) rotate(45deg); opacity: 0; }
+}
+
+/* МОБІЛЬНА АДАПТАЦІЯ */
+@media (max-width: 768px) {
+    body { padding: 0 20px 20px 20px; }
+    .site-header { padding: 20px; margin-bottom: 40px; }
+    .nav-container { flex-direction: column; gap: 20px; }
+    .nav-links { gap: 8px; width: 100%; justify-content: center; }
+    .nav-btn { padding: 10px 16px; font-size: 14px; }
+    h1 { font-size: 32px; margin: 20px 0 40px 0; }
+    .reason-row { grid-template-columns: 1fr !important; gap: 40px; margin-bottom: 60px; opacity: 1 !important; transform: none !important; }
+    .reason-row:nth-child(even) { display: flex; flex-direction: column-reverse; }
+    .reason-text { padding-left: 0; text-align: center; }
+    .main-reason, h3 { font-size: 26px; }
+    .sub-text { font-size: 16px; }
+    .mopsik, .video-container { max-width: 100%; transform: none !important; }
+}
+html {
+  scroll-behavior: smooth;
+}
