@@ -1,91 +1,28 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Чого мама має купить мені мопса</title>
+    <meta charset="UTF-8">
+    <title>Чого мама має купить мені мопса</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header id="top">
+        <h1>Чого мама має купить мені мопса</h1>
+    </header>
 
-  <!-- ШАПКА З НАВІГАЦІЄЮ -->
-  <header class="site-header">
-    <div class="nav-container">
-      <div class="nav-logo">🐾 Мопс-Лендінг</div>
-      <nav class="site-nav">
-        <ul class="nav-links">
-          <li><a href="#top" class="nav-btn">Головна</a></li>
-          <li><a href="#reasons" class="nav-btn">Причини</a></li>
-          <li><a href="#about-breed" class="nav-btn">Про породу</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ГОЛОВНИЙ ЗАГОЛОВОК -->
-  <h1 id="top" style="scroll-margin-top: 140px;">Чого мама має купить мені мопса</h1>
-
-  <!-- ВЕЛИКИЙ БЛОК З УСІМА ТРЬОМА ПРИЧИНАМИ -->
-  <div id="reasons" style="scroll-margin-top: 140px;">
-    
-    <!-- РЯД 1 (Причина 1) -->
-    <div class="reason-row">
-      <div class="reason-text">
-        <p class="main-reason"><strong>перша причина:</strong> ну ваще вин супер милашний милаш.</p>
-        <p class="sub-text">Тільки посдивись на глазки і складки з ним дома завжди будет весело і уютно.</p>
-      </div>
-      <div class="media-container">
-        <img class="mopsik" src="https://s0.rbk.ru/v6_top_pics/media/img/3/28/346820872290283.webp" alt="Мопс">
-      </div>
+    <div id="reasons">
+        <section>
+            <h2>перша причина</h2>
+            <p>ну ваще вин супер милашний милаш.</p>
+        </section>
+        <!-- Додай сюди інші секції, якщо треба -->
     </div>
 
-    <!-- РЯД 2 (Причина 2) -->
-    <div class="reason-row">
-      <div class="reason-text">
-        <h3>ну друга причина вин хропить</h3>
-        <p class="sub-text">Анатомічна особливість усіх мопсів — це укорочена лицева частина черепа (брахіцефалія) та подовжене м'яке піднебіння. Через це повітря під час проходження через дихальні шляхи зустрічає природний опір, що й викликає характерное сопіння або хропіння, коли собака повністю розслаблена уві сні. Це абсолютно природний процес для цієї породи.</p>
-      </div>
-      <div class="media-container">
-        <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/jsOuWMzSwxk" 
-            title="Pug Snoring" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
+    <div id="about-breed">
+        <h2>Про породу</h2>
+        <p>Тільки посдивись на глазки і складки з ним дома завжди будет весело і уютно.</p>
     </div>
 
-    <!-- РЯД 3 (Причина 3) -->
-    <div class="reason-row">
-      <div class="reason-text">
-        <p class="main-reason"><strong>третя причина:</strong> вони неймовірно віддані та дружелюбні.</p>
-        <p class="sub-text">Мопси — це собаки-компаньйони, які історично виводилися для того, щоб бути поруч із людиною. Вони не виявляють агресії, чудово ладнають з усіма членами родини та іншими тваринами. Мопс завжди відчуває настрій господаря і готовий підтримати у будь-яку хвилину, що робить його ідеальним домашнім улюбленцем.</p>
-      </div>
-      <div class="media-container">
-        <img class="mopsik" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9dtFfG7MYQqxcdBkYscIEkmUJfBO2LbaExBVlpTU_rryd9qfxApGCMBBv&s=10" alt="Мопс друг">
-      </div>
-    </div>
-
-  </div> <!-- КІНЕЦЬ БЛОКУ ПРИЧИН -->
-
-
-  <!-- ОКРЕМЫЙ БЛОК "ПРО ПОРОДУ" (Сюди кине кнопка з шапки) -->
-  <div id="about-breed" class="reason-row" style="scroll-margin-top: 140px;">
-    <div class="reason-text">
-      <h2>Про породу: Хто такий мопс?</h2>
-      <p class="sub-text">Мопси — це древня китайська порода, яка колись жила в імператорських палацах. Вони спеціально створені для любові та затишку. Вони не потребують занадто довгих забігів на вулиці, не псують меблі від нудьги і підлаштовуються під ритм життя родини. Це ідеальний собака для квартири, який даруватиме позитив щодня.</p>
-    </div>
-    <div class="media-container">
-      <img class="mopsik" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxm34yw-4rdOfaigHXrzCJRFtNA8caI50YddcBVRnyjX9VqHrD9m5X8i4&s=10" alt="Про породу мопс">
-    </div>
-  </div>
-
-
-  <!-- ПІДВАЛ -->
-  <footer class="site-footer">
-    <p>© 2026 Лендінг-переконання для мами. Всі права захищені, мопс має бути куплений!</p>
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
